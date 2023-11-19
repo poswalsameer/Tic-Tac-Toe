@@ -6,24 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- --STYLE CSS IS NOT NECESSSARY-- -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
 
     <title>Document</title>
 </head>
 <body>
     
-    <div class="flex justify-center items-center" > 
-        <div class= " mt-7 h-60 w-5/6 bg-yellow-200 flex flex-row justify-around items-center rounded-2xl " >
+    <div class=" mt-10 p-7 flex justify-center items-center w-screen" >
 
-            <h1 class="text-black text-7xl font-bold " >SAMEER</h1>
+        <h1 class="text-9xl" >TIC TAC TOE</h1>
 
-            <div class="h-40 w-40 bg-black rounded-xl " ></div>
+    </div>
 
-            <h1 class="text-black text-7xl font-bold" >POSWAL</h1>
+    <div class=" mt-32 flex justify-center items-center ">
+        
+        <div class="flex flex-col justify-center items-center " >
+
+            <button class=" m-5 h-24 w-44 flex justify-center items-center bg-blue-300 text-black rounded-xl text-xl font-bold" 
+            onclick="playGame()"
+            >Play Game</button>
+
+            <button class="m-5 h-24 w-44 flex justify-center items-center bg-blue-300 text-black  rounded-xl text-xl font-bold" >Exit</button>
 
         </div>
+
     </div>
 
 </body>
-</html>
+
+<script src="script.js"></script>
+
+</html>       

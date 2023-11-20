@@ -562,6 +562,14 @@ video {
   margin: 10rem;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
+.m-8 {
+  margin: 2rem;
+}
+
 .mx-40 {
   margin-left: 10rem;
   margin-right: 10rem;
@@ -625,6 +633,14 @@ video {
 
 .mt-56 {
   margin-top: 14rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
 }
 
 .block {
@@ -898,6 +914,21 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold {

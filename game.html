@@ -13,10 +13,21 @@
 <body>
 
     
-        <div class=" absolute mt-44 ml-96 h-4/6 w-3/6 bg-gray-700 flex justify-center items-center rounded-3xl hidden " >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptate alias vel officia nemo ratione nam modi sequi! Quasi, ipsa! Consectetur, iure. Mollitia incidunt ut unde cumque minus distinctio, soluta debitis nostrum porro sequi nulla inventore? Obcaecati adipisci nemo non.
+        <div class=" absolute mt-44 ml-96 h-4/6 w-3/6 bg-gray-700 flex flex-col justify-center items-center rounded-3xl hidden" >
+            <p class=" m-10 text-8xl" >WIN text</p>
+            <button class="m-5 h-24 w-44 flex justify-center items-center bg-blue-300 text-black rounded-xl text-xl font-bold" >Play Again</button>
+            <button class="m-5 h-24 w-44 flex justify-center items-center bg-blue-300 text-black rounded-xl text-xl font-bold" onclick="backToMenu()">Main Menu</button>
         </div>
     
+        <div class="absolute ml-10 " >
+            <button onclick="goBack()" >
+            <svg width="70" height="70" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="#141B34" stroke-width="1.5"/>
+                <path d="M8 12L16 12M8 12C8 11.2998 9.9943 9.99153 10.5 9.5M8 12C8 12.7002 9.9943 14.0085 10.5 14.5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+                
+        </div>
     
     <div class=" mt-10 p-7 flex justify-center items-center w-screen" >
 
@@ -42,7 +53,7 @@
 
     </div>
 
-    
-
 </body>
+
+<script src="script.js"></script>
 </html>

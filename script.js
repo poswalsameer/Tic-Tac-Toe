@@ -14,3 +14,16 @@ const backToMenu = () => {
 const goBack = () => {
     window.location.href = "index.html";
 }
+
+const playAgain = () => {
+    window.location.href = 'game.html';
+}
+
+const box = document.getElementsByClassName('box');
+
+function addElement(){
+
+    box.innerText = 'X';
+    console.log("The function is working fine");
+
+}

@@ -21,9 +21,27 @@ const playAgain = () => {
 
 const box = document.getElementsByClassName('box');
 
-function addElement(){
 
-    box.innerText = 'X';
-    console.log("The function is working fine");
+//variable used to store the value of turn
+let turn = 'X';
 
+//Function that changes the value of turn 
+const changeTurn = () => {
+    if( turn === 'X' ){
+        turn = 'O';
+    }
+    else{
+        turn = 'X';
+    }
 }
+
+//Logic to add text in the tic tac toe table
+Array.from(box).forEach(element => {
+    element.addEventListener('click', ()=> {
+        element.innerText = turn;
+        changeTurn();
+    })
+})
+
+
+

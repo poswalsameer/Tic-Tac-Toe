@@ -13,7 +13,7 @@
 <body>
 
     
-        <div class=" hidden absolute mt-44 ml-96 h-4/6 w-3/6 bg-gray-700 flex flex-col justify-center items-center rounded-3xl" onclick="playAgain()" >
+        <div class="absolute hidden mt-44 ml-96 h-4/6 w-3/6 bg-gray-700 flex flex-col justify-center items-center rounded-3xl" onclick="playAgain()" >
 
             <p class=" m-10 text-8xl" >WIN text</p>
 
@@ -33,15 +33,15 @@
                 
         </div>
     
-    <div class=" mt-10 p-7 flex justify-center items-center w-screen" >
+    <div class=" mt-7 p-7 flex justify-center items-center w-screen" >
 
         <h1 class="text-9xl" >TIC TAC TOE</h1>
 
     </div>
 
-    <div class=" mt-10 flex justify-center items-center" >
+    <div class=" flex flex-col justify-center items-center" >
 
-        <div class=" grid grid-cols-3 " >
+        <div class="grid grid-cols-3 gameGrid" >
             
             <div class="h-32 w-32 border-2 border-white flex justify-center items-center text-7xl box" id="box"></div>
             <div class="h-32 w-32 border-2 border-white flex justify-center items-center text-7xl box"  ></div>
@@ -55,7 +55,15 @@
 
         </div>
 
+        <div class="text-3xl textDiv">
+            Turn For: <span class="turnText">X</span> 
+        </div>
+
     </div>
+
+    <!-- <div class="bg-blue-800 h-40 p-10" >
+        This is some random text
+    </div> -->
 
 </body>
 

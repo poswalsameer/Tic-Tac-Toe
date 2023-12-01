@@ -12,3 +12,23 @@ body{
     background-color: black;
     color: white;
 }
+
+.gameGrid{
+
+    margin-top: 1rem;
+
+}
+
+.textDiv{
+    background-color: rgb(241, 184, 241);
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin-top: 1.7rem;
+}
+
+.turnText{
+    font-weight: bolder;
+    color: rgb(86, 60, 10);
+    /* color: rgb(32, 84, 32); */
+}

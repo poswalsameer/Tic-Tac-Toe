@@ -48,6 +48,37 @@ const changeTurnText = () => {
 }
 
 
+//Game Winning Logic 
+let isGameOver = false;
+
+const checkWin = () => {
+
+    let winArr = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ]
+
+
+    winArr.forEach(e => {
+        if (
+            box[e[0]].innerText !== "" &&
+            box[e[0]].innerText === box[e[1]].innerText &&
+            box[e[1]].innerText === box[e[2]].innerText
+        ) {
+            // console.log("Won the game");
+            alert( turn + " won the game." );
+        }
+    });
+
+}
+
+
 
 //Logic to add text in the tic tac toe table
 Array.from(box).forEach(element => {
@@ -59,10 +90,24 @@ Array.from(box).forEach(element => {
         else{
             element.style.color = "green";
         }
-        changeTurn();
-        console.log("change turn is working");
-        changeTurnText();
-        // if()
+
+        //checking if anyone won the game or not
+        checkWin();
+
+        if( !isGameOver ){
+            //changing the turn using this function
+            changeTurn();
+            //changing the text after every turn
+            changeTurnText();
+        }
+
+        //checking if anyone won the game or not
+        // checkWin();
+
+        //changing the turn
+        // changeTurn();
+        //changing the turn text
+        // changeTurnText();
     })
 })
 

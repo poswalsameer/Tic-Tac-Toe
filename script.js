@@ -1,5 +1,6 @@
 console.log("The javascript is working fine");
 
+
 // function that takes to the main game screen from main menu on button click
 const playGame = () => {
     window.location.href = "game.html";
@@ -71,8 +72,7 @@ const checkWin = () => {
             box[e[0]].innerText === box[e[1]].innerText &&
             box[e[1]].innerText === box[e[2]].innerText
         ) {
-            // console.log("Won the game");
-            alert( turn + " won the game." );
+            window.location.href = "win.html";
         }
     });
 
@@ -110,7 +110,6 @@ Array.from(box).forEach(element => {
         // changeTurnText();
     })
 })
-
 
 
 

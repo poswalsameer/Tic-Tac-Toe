@@ -25,14 +25,17 @@ const box = document.getElementsByClassName('box');
 
 //variable used to store the value of turn
 let turn = 'X';
+let turnCount = 1;
 
 //Function that changes the value of turn 
 const changeTurn = () => {
     if( turn === 'X' ){
         turn = 'O';
+        turnCount++;
     }
     else{
         turn = 'X';
+        turnCount++;
     }
 }
 
@@ -52,19 +55,18 @@ const changeTurnText = () => {
 //Game Winning Logic 
 let isGameOver = false;
 
+let winArr = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+]
+
 const checkWin = () => {
-
-    let winArr = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
-    ]
-
 
     winArr.forEach(e => {
         if (
@@ -74,11 +76,10 @@ const checkWin = () => {
         ) {
             window.location.href = "win.html";
         }
+
     });
 
 }
-
-
 
 //Logic to add text in the tic tac toe table
 Array.from(box).forEach(element => {
@@ -86,9 +87,11 @@ Array.from(box).forEach(element => {
         element.innerText = turn;
         if( turn === 'X' ){
             element.style.color = "rgb(137, 105, 47)";
+            console.log(turnCount);
         }
         else{
             element.style.color = "green";
+            console.log(turnCount);
         }
 
         //checking if anyone won the game or not
@@ -112,6 +115,10 @@ Array.from(box).forEach(element => {
 })
 
 
+//Winning Page
 
+if( turnCount === 9 ){
+    document.getElementsByClassName('winText').innerText = "NoBody won the game";
+}
 
 

@@ -1,24 +1,23 @@
 console.log("The javascript is working fine");
 
 
-// function that takes to the main game screen from main menu on button click
+//variables that will be used in the game
+let buttonClickAudio = new Audio("./musicFiles/click.mp3");
+let winningSound = new Audio("./musicFiles/win.mp3");
+
+
+// function that takes to the main game screen from main menu on button click 
+//this function is also used by the win Game screen by the play again button
 const playGame = () => {
     window.location.href = "game.html";
 }
 
-// function that takes us back to the main menu on button click
-const backToMenu = () => {
-    window.location.href = "index.html";
-}
-
 //back button on the game screen to go back to the main menu
+//this function is also used by the win screen by main menu button
 const goBack = () => {
     window.location.href = "index.html";
 }
 
-const playAgain = () => {
-    window.location.href = 'game.html';
-}
 
 const box = document.getElementsByClassName('box');
 
@@ -74,43 +73,50 @@ const checkWin = () => {
             box[e[0]].innerText === box[e[1]].innerText &&
             box[e[1]].innerText === box[e[2]].innerText
         ) {
-            window.location.href = "win.html";
+            //playing the winning sound
+            winningSound.play();
+
+            //set time out function so that window opens after 1.5 seconds
+            setTimeout(() => {
+                window.location.href = "win.html";
+            }, 1500);            
         }
 
     });
 
 }
 
+
 //Logic to add text in the tic tac toe table
 Array.from(box).forEach(element => {
     element.addEventListener('click', ()=> {
-        element.innerText = turn;
-        if( turn === 'X' ){
-            element.style.color = "rgb(137, 105, 47)";
-            console.log(turnCount);
+
+        if( element.innerText === ''){
+
+            buttonClickAudio.play();
+            element.innerText = turn;
+
+            if( turn === 'X' ){
+                element.style.color = "rgb(137, 105, 47)";
+                console.log(turnCount);
+            }
+            else{
+                element.style.color = "green";
+                console.log(turnCount);
+            }
+
+            //function call for checking if anyone won the game or not
+            checkWin();
+
+            if( !isGameOver ){
+                //changing the turn using this function
+                changeTurn();
+                //changing the text after every turn
+                changeTurnText();
+            }
+
         }
-        else{
-            element.style.color = "green";
-            console.log(turnCount);
-        }
 
-        //checking if anyone won the game or not
-        checkWin();
-
-        if( !isGameOver ){
-            //changing the turn using this function
-            changeTurn();
-            //changing the text after every turn
-            changeTurnText();
-        }
-
-        //checking if anyone won the game or not
-        // checkWin();
-
-        //changing the turn
-        // changeTurn();
-        //changing the turn text
-        // changeTurnText();
     })
 })
 

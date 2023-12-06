@@ -4,18 +4,28 @@ console.log("The javascript is working fine");
 //variables that will be used in the game
 let buttonClickAudio = new Audio("./musicFiles/click.mp3");
 let winningSound = new Audio("./musicFiles/win.mp3");
+let buttonClick = new Audio("./musicFiles/buttonClick.mp3");
 
 
 // function that takes to the main game screen from main menu on button click 
 //this function is also used by the win Game screen by the play again button
 const playGame = () => {
-    window.location.href = "game.html";
+
+    buttonClick.play();
+    setTimeout(() => {
+        window.location.href = "game.html";
+    }, 700);
 }
 
 //back button on the game screen to go back to the main menu
 //this function is also used by the win screen by main menu button
 const goBack = () => {
-    window.location.href = "index.html";
+
+    buttonClick.play();
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 700);
+    
 }
 
 
@@ -72,15 +82,10 @@ const checkWin = () => {
             box[e[0]].innerText !== "" &&
             box[e[0]].innerText === box[e[1]].innerText &&
             box[e[1]].innerText === box[e[2]].innerText
-        ) {
-            //playing the winning sound
-            winningSound.play();
-
-            //set time out function so that window opens after 1.5 seconds
-            setTimeout(() => {
-                window.location.href = "win.html";
-            }, 1500);            
+        ) {          
+            window.location.href = "win.html";
         }
+        
 
     });
 

@@ -83,7 +83,7 @@ const checkWin = () => {
             box[e[0]].innerText === box[e[1]].innerText &&
             box[e[1]].innerText === box[e[2]].innerText
         ) {          
-            window.location.href = "win.html";
+            window.location.href = "win.html"; 
         }
         
 
@@ -95,6 +95,11 @@ const checkWin = () => {
 //Logic to add text in the tic tac toe table
 Array.from(box).forEach(element => {
     element.addEventListener('click', ()=> {
+
+        //this means that all the places in the board have been filled
+        if( turnCount === 9 ){
+            window.location.href = 'win.html';
+        }
 
         if( element.innerText === ''){
 

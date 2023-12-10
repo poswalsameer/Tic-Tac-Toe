@@ -956,6 +956,10 @@ video {
   line-height: 1;
 }
 
+.text-\[2rem\] {
+  font-size: 2rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1026,6 +1030,16 @@ body{
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1050,6 +1064,14 @@ body{
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+
+  .lg\:text-\[7rem\] {
+    font-size: 7rem;
+  }
+
+  .lg\:text-\[4rem\] {
+    font-size: 4rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1064,5 +1086,9 @@ body{
   .xl\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .xl\:text-\[8rem\] {
+    font-size: 8rem;
   }
 }
